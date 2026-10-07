@@ -2,7 +2,9 @@
 
 ## Tooling
 
-Use `uv` for Python dependency and environment management. Do not add parallel dependency workflows with `pip`, Poetry, Conda, or another package manager unless the project explicitly changes direction.
+Follow the environment setup in `README.md`, which currently uses `venv` and `pip` to install the development
+tooling. `uv` is the intended dependency and environment manager once a foundation increment adds the required
+project metadata and lockfile. Until then, do not add a parallel dependency workflow.
 
 The intended application entry point is:
 
@@ -12,7 +14,9 @@ main.py
 
 The test framework is `pytest`.
 
-Formatting, linting, type checking, and related automated quality rules are defined by the repository's existing pre-commit hook configuration. Inspect that configuration before changing code and use the tools and versions it already specifies. Do not invent duplicate lint or type-check configurations merely because a tool is familiar.
+Formatting, linting, and file-validation rules are defined by the repository's existing pre-commit hook
+configuration. Inspect that configuration before changing code and use the tools and versions it already specifies.
+Do not invent duplicate quality configurations merely because a tool is familiar.
 
 ## Configuration
 
